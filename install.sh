@@ -1,17 +1,20 @@
 #!/bin/bash
 # Set symlinks to version controlled dot folders
 
+cd "$(dirname "$0")/.."
+DOTFILES_ROOT=$(pwd -P)
+
 # bash
-ln -sf "$HOME/.dotfiles/bash/bashrc" "$HOME/.bashrc"
+ln -sf "$DOTFILES_ROOT/bash/bashrc" "$HOME/.bashrc"
 source "$HOME/.bashrc"
 
 # vim
-ln -sf "$HOME/.dotfiles/vim" "$HOME/.vim"
-ln -sf "$HOME/.dotfiles/vim/vimrc" "$HOME/.vimrc"
+ln -sf "$DOTFILES_ROOT/vim" "$HOME/.vim"
+ln -sf "$DOTFILES_ROOT/vim/vimrc" "$HOME/.vimrc"
 
 # git
-ln -sf "$HOME/.dotfiles/git/gitconfig" "$HOME/.gitconfig"
+ln -sf "$DOTFILES_ROOT/git/gitconfig" "$HOME/.gitconfig"
 
 # fonts
-ln -sf "$HOME/.dotfiles/fonts" "$HOME/.fonts"
+ln -sf "$DOTFILES_ROOT/fonts" "$HOME/.fonts"
 
